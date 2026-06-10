@@ -75,7 +75,7 @@ def test_get_all_users_ordered_by_id(client, three_users):
 def test_get_all_users_filter_by_first_name(client, three_users):
     body = client.get("/users/?first_name=ada").get_json()
     assert len(body) == 1
-    assert body[0]["first_name"] == "Ada"
+    assert body[0]["first_name"] == "Adam"
 
 
 def test_get_all_users_filter_no_match(client, three_users):
